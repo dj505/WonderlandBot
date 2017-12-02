@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import os
 import configparser
 from configparser import SafeConfigParser
@@ -41,7 +44,7 @@ async def daily(ctx):
     try:
         config = SafeConfigParser()
         currenttime = datetime.datetime.now()
-        user = ctx.message.author
+        user = ctx.message.author.id
         config.read('money.ini')
         if config.has_section('{}'.format(user)):
             balance = int(config.get('{}'.format(user), 'balance'))
