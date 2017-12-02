@@ -2,3 +2,4 @@
 token = BotTokenGoesHere
 prefix = BotPrefix
 desc = Bot description, no quotation marks needed
+modrole = Whatever role is equivalent to mod on your server

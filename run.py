@@ -86,7 +86,10 @@ async def addgif(ctx, arg1, arg2):
     Adds a reaction image or reaction text.
     Only admins should be able to do this.
     """
-    if "hallo mod" in [y.name.lower() for y in ctx.message.author.roles]:
+    config = SafeConfigParser()
+    config.read('settings.ini')
+    modrole = config.get('main', 'modrole')
+    if "{}".format(modrole) in [y.name.lower() for y in ctx.message.author.roles]:
         config = SafeConfigParser()
         config.read('reactions.ini')
         config.set('gifs', '{}'.format(arg1), '{}'.format(arg2))
