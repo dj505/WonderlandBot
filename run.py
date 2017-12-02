@@ -19,11 +19,11 @@ bot = commands.Bot(command_prefix=prefix, description=description)
 
 @bot.event
 async def on_ready():
-    print("------------")
+    print("------------------")
     print("Logged in as")
     print(bot.user.name)
     print(bot.user.id)
-    print("------------")
+    print("------------------")
 
 @bot.command(pass_context="True",brief="Hello World!",aliases=['hi','hey'])
 async def hello(ctx):
