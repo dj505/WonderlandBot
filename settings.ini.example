@@ -1,0 +1,4 @@
+[main]
+token = BotTokenGoesHere
+prefix = BotPrefix
+desc = Bot description, no quotation marks needed
