@@ -1,22 +1,16 @@
 # WonderlandBot
+A Discord server bot originally by 916253 and ihaveamac/ihaveahax, heavily modified by dj505. Remodelled to be more widely used in a variety of servers, manily [Wonderland Corp.](https://discord.gg/WphDny9).
+All the moderation tools and major things are from their respective authors, and I take no credit whatsoever. All I did was change the name and make it more suited to everyday use.
 
-A super simple Discord bot written in Python using discord.py.
-All configurations are stored in .ini files because json is slightly more difficult and I'm lazy. Also it's easy to access.
+This bot is capable has many things, such as:
+* A currency system (currently does not have a use)
+* Many moderation tools
+* Nintendo Friend Code database for sharing FCs
+* A not too terrible not not great reaction gif/text system
+* xkcd comic parser to grab comics by number, randomly, or even by certain phrases
+* A parser for [a certain esoteric programming language](https://en.wikipedia.org/wiki/Brainfuck)
+* An addon system, with an example addon file to get you started
 
-# What can it do?
-
-Not much. It has:
-* A not-terrible-but-not-great currency system
-* A simple custom commands/reaction gif system
-* Easy configurations using .ini files
-* A ton of extraneous modules imported
-* No comments in the code
-
-# How do I set it up?
-
-1. Have Python3 installed
-2. Install discord.py using pip
-3. Edit the configuration files to suit your bot's account as detailed in each .ini file (settings.ini is the main one)
-4. Modify code to suit your needs
-5. ???
-6. Profit
+## Requirements:
+* Python 3.5 or above
+* [discord.py](https://github.com/Rapptz/discord.py). Be sure to use the latest version for best results.
