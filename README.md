@@ -1,6 +1,5 @@
 # WonderlandBot
-A Discord server bot by dj505. Remodelled to be more widely used in a variety of servers, manily [Wonderland Corp.](https://discord.gg/WphDny9)
-All the moderation tools and major things are from their respective authors, and I take no credit whatsoever. All I did was change the name and make it more suited to everyday use.
+A Discord server bot by dj505. Ready to be used in a variety of servers, meant for [Wonderland Corp.](https://discord.gg/WphDny9)
 
 This bot is capable has many things, such as:
 * A currency system (currently does not have a use)
