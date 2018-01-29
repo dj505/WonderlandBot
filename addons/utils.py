@@ -94,7 +94,7 @@ class Utils:
         embed = discord.Embed(name='Bot Source Code', description='Have some spaghetti code!', color=0x00FF99)
         embed.set_thumbnail(url='https://opensource.org/files/osi_keyhole_600X600_90ppi.png')
         embed.add_field(name='GitHub Repository', value='https://github.com/dj505/WonderlandBot', inline=True)
-        await seld.bot.say(embed=embed)
+        await self.bot.say(embed=embed)
 
 def setup(bot):
     bot.add_cog(Utils(bot))
