@@ -4,12 +4,10 @@ All the moderation tools and major things are from their respective authors, and
 
 This bot is capable has many things, such as:
 * A currency system (currently does not have a use)
-* Many moderation tools
-* Nintendo Friend Code database for sharing FCs
+* A few moderation tools
 * A not too terrible not not great reaction gif/text system
 * xkcd comic parser to grab comics by number, randomly, or even by certain phrases
-* A parser for [a certain esoteric programming language](https://en.wikipedia.org/wiki/Brainfuck) (Not enabled by default, can be loaded with `c?load addons.bf` or `c?load bf`)
-* An addon system, with an example addon file to get you started
+* An addon system, which should be easy enough to get the gist of from looking at existing addons
 
 ## Requirements:
 * Python 3.5 or above
