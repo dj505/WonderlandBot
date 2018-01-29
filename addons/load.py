@@ -20,9 +20,14 @@ class Load:
             if module[0:7] != "addons.":
                 module = "addons." + module
             self.bot.load_extension(module)
-            await self.bot.say('✅ Extension loaded.')
+            embed = discord.Embed(title='Extension loaded!', description='Extension "{}" has been loaded successfully.'.format(module), color=0x00ff99)
+            embed.set_thumbnail(url='https://i.imgur.com/TVtrqXR.png')
+            await self.bot.say(embed=embed)
         except Exception as e:
-            await self.bot.say('💢 Failed!\n```\n{}: {}\n```'.format(type(e).__name__, e))
+            embed = discord.Embed(title='Extension load failed!', description='Extension "{}" has failed to load.'.format(module), color=0xFF0000)
+            embed.add_field(name='Error', value='\n{}: {}\n'.format(type(e).__name__, e), inline=True)
+            embed.set_thumbnail(url='https://i.imgur.com/z2xfrsH.png')
+            await self.bot.say(embed=embed)
 
     @commands.has_permissions(ban_members=True)
     @commands.command(hidden=True)
@@ -32,12 +37,19 @@ class Load:
             if module[0:7] != "addons.":
                 module = "addons." + module
             if module == "addons.load":
-                await self.bot.say("❌ I don't think you want to unload that!")
+                embed = discord.Embed(title='Woops!', description='I don\'t think you want to unload that!', color=0xFF0000)
+                embed.set_thumbnail(url='https://i.imgur.com/z2xfrsH.png')
+                await self.bot.say(embed=embed)
             else:
                 self.bot.unload_extension(module)
-                await self.bot.say('✅ Extension unloaded.')
+                embed = discord.Embed(title='Extension unloaded!', description='Extension "{}" has been unloaded successfully.'.format(module), color=0x00ff99)
+                embed.set_thumbnail(url='https://i.imgur.com/TVtrqXR.png')
+                await self.bot.say(embed=embed)
         except Exception as e:
-            await self.bot.say('💢 Failed!\n```\n{}: {}\n```'.format(type(e).__name__, e))
+            embed = discord.Embed(title='Extension unload failed!', description='Extension "{}" has failed to unload.'.format(module), color=0xFF0000)
+            embed.add_field(name='Error', value='\n{}: {}\n'.format(type(e).__name__, e), inline=True)
+            embed.set_thumbnail(url='https://i.imgur.com/z2xfrsH.png')
+            await self.bot.say(embed=embed)
 
     @commands.has_permissions(ban_members=True)
     @commands.command(name='reload', hidden=True)
@@ -48,9 +60,14 @@ class Load:
                 module = "addons." + module
             self.bot.unload_extension(module)
             self.bot.load_extension(module)
-            await self.bot.say('✅ Extension reloaded.')
+            embed = discord.Embed(title='Extension reloaded!', description='Extension "{}" has been reloaded successfully.'.format(module), color=0x00ff99)
+            embed.set_thumbnail(url='https://i.imgur.com/TVtrqXR.png')
+            await self.bot.say(embed=embed)
         except Exception as e:
-            await self.bot.say('💢 Failed!\n```\n{}: {}\n```'.format(type(e).__name__, e))
+            embed = discord.Embed(title='Extension reload failed!', description='Extension "{}" has failed to reload.'.format(module), color=0xFF0000)
+            embed.add_field(name='Error', value='\n{}: {}\n'.format(type(e).__name__, e), inline=True)
+            embed.set_thumbnail(url='https://i.imgur.com/z2xfrsH.png')
+            await self.bot.say(embed=embed)
 
 def setup(bot):
     bot.add_cog(Load(bot))
