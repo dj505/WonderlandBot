@@ -91,10 +91,22 @@ class Utils:
 
     @commands.command(pass_context=True, brief='A Link to the Source')
     async def source(self, ctx):
-        embed = discord.Embed(name='Bot Source Code', description='Have some spaghetti code!', color=0x00FF99)
+        embed = discord.Embed(title='Bot Source Code', description='Have some spaghetti code!', color=0x00FF99)
         embed.set_thumbnail(url='https://opensource.org/files/osi_keyhole_600X600_90ppi.png')
         embed.add_field(name='GitHub Repository', value='https://github.com/dj505/WonderlandBot', inline=True)
         await self.bot.say(embed=embed)
+
+    @commands.command(pass_context=True, brief='Says something')
+    async def say(self, ctx, *string):
+        if '@' in str(ctx.message.content):
+            embed = discord.Embed(title='Say command failed!', description='Please do not attempt to tag users with this command. \
+                                                                            This results in either double tagging, or sending an `@everyone` tag \
+                                                                            without permissions by using the bot as a loophole.', color=0xFF0000)
+            embed.set_thumbnail(url='https://i.imgur.com/z2xfrsH.png')
+            await self.bot.say(embed=embed)
+        else:
+            await self.bot.say(ctx.message.content[6:])
+            await self.bot.delete_message(ctx.message)
 
 def setup(bot):
     bot.add_cog(Utils(bot))
