@@ -1,5 +1,5 @@
 # WonderlandBot
-A Discord server bot by dj505. Ready to be used in a variety of servers, meant for [Wonderland Corp.](https://discord.gg/WphDny9)
+A Discord server bot by dj505. Ready to be used in a variety of servers, meant for Wonderland Corp.
 
 This bot is capable has many things, such as:
 * A currency system (currently does not have a use)
